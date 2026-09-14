@@ -1,0 +1,7 @@
+{
+  "name": "CommonUX.Editor",
+  "rootNamespace": "CommonUX.Editor",
+  "references": ["CommonUX.Core", "CommonUX.UIToolkit"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "CommonUX.Samples.TypedNavigation",
+  "rootNamespace": "CommonUX.Samples.TypedNavigation",
+  "references": [
+    "CommonUX.Core",
+    "CommonUX.UIToolkit"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

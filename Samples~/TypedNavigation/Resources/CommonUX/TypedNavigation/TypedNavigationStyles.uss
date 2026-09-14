@@ -1,0 +1,173 @@
+.sample-stack {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sample-screen {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+}
+
+.home-screen {
+    background-color: rgb(16, 23, 34);
+}
+
+.home-card {
+    width: 570px;
+    max-width: 100%;
+    padding: 32px;
+    background-color: rgb(25, 35, 49);
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: rgb(49, 65, 83);
+}
+
+.eyebrow {
+    color: rgb(111, 222, 202);
+    font-size: 11px;
+    -unity-font-style: bold;
+    margin-bottom: 12px;
+    white-space: normal;
+}
+
+.title {
+    color: rgb(242, 247, 250);
+    font-size: 29px;
+    -unity-font-style: bold;
+    white-space: normal;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: rgb(189, 202, 215);
+    font-size: 14px;
+    white-space: normal;
+    margin-bottom: 20px;
+}
+
+.identity-row {
+    flex-direction: row;
+    margin-bottom: 22px;
+}
+
+.badge {
+    background-color: rgb(39, 53, 70);
+    color: rgb(192, 214, 225);
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.primary-button,
+.secondary-button {
+    min-height: 44px;
+    margin: 0 0 10px 0;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0);
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.primary-button {
+    background-color: rgb(111, 222, 202);
+    color: rgb(14, 34, 34);
+}
+
+.primary-button:hover {
+    background-color: rgb(145, 238, 221);
+}
+
+.secondary-button {
+    background-color: rgb(42, 58, 77);
+    color: rgb(233, 241, 247);
+}
+
+.secondary-button:hover {
+    background-color: rgb(55, 74, 95);
+}
+
+.primary-button:focus,
+.secondary-button:focus {
+    border-color: rgb(255, 225, 137);
+}
+
+.status {
+    color: rgb(209, 220, 229);
+    font-size: 13px;
+    white-space: normal;
+    margin-top: 12px;
+}
+
+.hint {
+    color: rgb(148, 167, 185);
+    font-size: 12px;
+    white-space: normal;
+    margin-top: 18px;
+}
+
+.modal-screen {
+    background-color: rgba(4, 9, 16, 0.8);
+}
+
+.settings-card {
+    width: 450px;
+    max-width: 100%;
+    padding: 30px;
+    background-color: rgb(29, 42, 57);
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: rgb(92, 127, 141);
+}
+
+.settings-title {
+    color: rgb(242, 247, 250);
+    font-size: 27px;
+    -unity-font-style: bold;
+    margin-bottom: 12px;
+}
+
+#volume-slider {
+    color: rgb(217, 230, 238);
+    margin: 8px 0;
+}
+
+.volume-value {
+    color: rgb(111, 222, 202);
+    font-size: 20px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-right;
+    margin-bottom: 22px;
+}
+
+.action-bar-heading {
+    color: rgb(148, 167, 185);
+    font-size: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.sample-action-bar {
+    flex-wrap: wrap;
+}
+
+.sample-action-bar .commonux-action-bar__action {
+    min-height: 30px;
+    padding: 5px 10px;
+    margin: 0 6px 4px 0;
+    background-color: rgb(39, 53, 70);
+    color: rgb(210, 226, 233);
+    border-radius: 5px;
+    border-width: 0;
+}
+
+.sample-action-bar .commonux-action-bar__action:hover {
+    background-color: rgb(57, 77, 98);
+}

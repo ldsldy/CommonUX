@@ -1,0 +1,33 @@
+{
+  "name": "com.commonux.ui",
+  "version": "0.1.0",
+  "displayName": "CommonUX",
+  "description": "Reusable screen activation, navigation, focus and command behavior for Unity UI Toolkit. Project-defined identifiers and composition stay outside the package.",
+  "unity": "6000.5",
+  "dependencies": {
+    "com.unity.inputsystem": "1.20.0",
+    "com.unity.modules.uielements": "1.0.0"
+  },
+  "keywords": [
+    "ui-toolkit",
+    "navigation",
+    "focus",
+    "input",
+    "commonux"
+  ],
+  "samples": [
+    {
+      "displayName": "Typed Navigation",
+      "description": "Project-owned enum identifiers, a menu and a modal with retained state and focus restoration.",
+      "path": "Samples~/TypedNavigation"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ldsldy/CommonUX.git"
+  },
+  "documentationUrl": "https://github.com/ldsldy/CommonUX#readme",
+  "bugs": {
+    "url": "https://github.com/ldsldy/CommonUX/issues"
+  }
+}

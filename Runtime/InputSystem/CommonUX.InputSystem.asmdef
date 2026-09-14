@@ -1,0 +1,10 @@
+{
+  "name": "CommonUX.InputSystem",
+  "rootNamespace": "CommonUX.InputSystem",
+  "references": [
+    "CommonUX.Core",
+    "CommonUX.UIToolkit",
+    "Unity.InputSystem"
+  ],
+  "autoReferenced": true
+}
