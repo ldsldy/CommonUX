@@ -1,6 +1,0 @@
-{
-  "name": "CommonUX.UIToolkit",
-  "rootNamespace": "CommonUX.UIToolkit",
-  "references": ["CommonUX.Core"],
-  "autoReferenced": true
-}

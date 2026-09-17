@@ -1,0 +1,14 @@
+{
+  "name": "CommonUX.EditorTests",
+  "rootNamespace": "CommonUX.Tests",
+  "references": [
+    "CommonUX.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

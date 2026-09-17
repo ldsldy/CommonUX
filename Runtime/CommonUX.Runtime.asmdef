@@ -1,0 +1,5 @@
+{
+  "name": "CommonUX.Runtime",
+  "rootNamespace": "CommonUX",
+  "autoReferenced": true
+}
