@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
@@ -147,6 +148,59 @@ namespace CommonUX.Tests
             Assert.That(nested.parent, Is.Null);
         }
 
+        [Test]
+        public void PushAndPop_InvokeLifecycleCallbacksInTransitionOrder()
+        {
+            var calls = new List<string>();
+            var stack = new ScreenStackElement();
+            var first = new RecordingScreen("first", calls);
+            var second = new RecordingScreen("second", calls);
+
+            stack.Push(first);
+            stack.Push(second);
+            stack.Pop();
+
+            Assert.That(calls, Is.EqualTo(new[]
+            {
+                "first activated",
+                "first covered",
+                "second activated",
+                "second popped",
+                "first activated"
+            }));
+        }
+
+        [Test]
+        public void PoppedScreen_CanBePushedAgain()
+        {
+            var stack = new ScreenStackElement();
+            var screen = new TestScreen();
+            stack.Push(screen);
+            stack.Pop();
+
+            stack.Push(screen);
+
+            Assert.That(screen.parent, Is.SameAs(stack));
+            Assert.That(screen.ActivatedCount, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void SeparateStacks_TransitionIndependently()
+        {
+            var firstStack = new ScreenStackElement();
+            var secondStack = new ScreenStackElement();
+            var first = new TestScreen();
+            var second = new TestScreen();
+            firstStack.Push(first);
+            secondStack.Push(second);
+
+            firstStack.Pop();
+
+            Assert.That(first.parent, Is.Null);
+            Assert.That(second.parent, Is.SameAs(secondStack));
+            Assert.That(second.PoppedCount, Is.Zero);
+        }
+
         private Focusable FocusedElement =>
             window.rootVisualElement.panel.focusController.focusedElement;
 
@@ -196,6 +250,22 @@ namespace CommonUX.Tests
             }
 
             protected override void OnActivated() => onActivated();
+        }
+
+        private sealed class RecordingScreen : StackableScreenElement
+        {
+            private readonly string screenName;
+            private readonly List<string> calls;
+
+            public RecordingScreen(string screenName, List<string> calls)
+            {
+                this.screenName = screenName;
+                this.calls = calls;
+            }
+
+            protected override void OnActivated() => calls.Add($"{screenName} activated");
+            protected override void OnCovered() => calls.Add($"{screenName} covered");
+            protected override void OnPopped() => calls.Add($"{screenName} popped");
         }
 
         private sealed class TestWindow : EditorWindow
